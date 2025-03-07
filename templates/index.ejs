@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <h1 aria-label="Map Converter by Alen">Map Converter</h1>
+      <nav>
+        <a href="/">Dashboard</a>
+      </nav>
+    </div>
+
+    <div class="container">
+      <textarea
+        id="input-text"
+        class="text-area"
+        placeholder="Enter the input code here..."
+      ></textarea>
+      <button id="action-button" class="center-button">=></button>
+      <textarea
+        id="output-text"
+        class="text-area"
+        placeholder="You will see converted code here..."
+      ></textarea>
+    </div>
+
+    <link rel="stylesheet" href="/libraries/alertify.min.css" />
+    <link rel="stylesheet" href="/libraries/default.min.css" />
+    <script src="/libraries/alertify.min.js"></script>
+    <script src="/scripts/constants.js"></script>
+    <script src="/scripts/generator.js"></script>
+    <script src="/scripts/CoordinateAreaMap.js"></script>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
