@@ -17,7 +17,7 @@ body {
 
 .top-bar {
     width: 100%;
-    background-color: #6c63ff;
+    background-color: #73bf44;
     color: white;
     padding: 15px 30px;
     display: flex;
@@ -74,11 +74,11 @@ body {
 }
 
 .text-area:focus {
-    border-color: #6c63ff;
+    border-color: #73bf44;
 }
 
 .center-button {
-    background-color: #6c63ff;
+    background-color: #73bf44;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -89,7 +89,7 @@ body {
 }
 
 .center-button:hover {
-    background-color: #574fdb;
+    background-color: #73bf44;
     transform: scale(1.1);
 }
 
