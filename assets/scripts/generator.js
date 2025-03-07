@@ -1,10 +1,10 @@
-function stringifyWithUnquotedKeys(obj) {
+function transformers(obj) {
   const entries = Object.entries(obj).map(([key, value]) => {
     if (typeof value === "object" && !Array.isArray(value)) {
-      return `${key}:${stringifyWithUnquotedKeys(value)}`;
+      return `${key}:${transformers(value)}`;
     } else if (Array.isArray(value)) {
       const arrayContent = value
-        .map((item) => stringifyWithUnquotedKeys(item))
+        .map((item) => transformers(item))
         .join(",");
       return `${key}:[${arrayContent}]`;
     } else {
@@ -47,7 +47,7 @@ function generateMapping(areas) {
         type: v.type,
       };
     }
-    modifiedStringMap += stringifyWithUnquotedKeys(modifiedCoordinate)
+    modifiedStringMap += transformers(modifiedCoordinate)
       .concat(",")
       .concat("\n");
   }
